@@ -1,0 +1,403 @@
+{
+	"info": {
+		"_postman_id": "f586647c-4f90-4f35-8641-ee4b38651976",
+		"name": "AbarrotesCollection",
+		"description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47800192",
+		"_collection_link": "https://dcamarillo01-7221282.postman.co/workspace/Diego's-Workspace~f5e73686-64ac-44d3-8f87-00a927668bb5/collection/47800192-f586647c-4f90-4f35-8641-ee4b38651976?action=share&source=collection_link&creator=47800192"
+	},
+	"item": [
+		{
+			"name": "AbarrotesAPI",
+			"item": [
+				{
+					"name": "Producto",
+					"item": [
+						{
+							"name": "ProductoGetAll",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5134/api/Producto/GetAll",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5134",
+									"path": [
+										"api",
+										"Producto",
+										"GetAll"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "RegistrarProducto",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nombre\": \"Dulces de zebras  de chile\",\r\n  \"descripcion\": \"Gomitas en forma de zebras cuebiertos en chile\",\r\n  \"precioUnitario\": 33\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5134/api/Producto/ProductoAdd",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5134",
+									"path": [
+										"api",
+										"Producto",
+										"ProductoAdd"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ProductoUpdate",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"idProducto\": 38,\r\n  \"nombre\": \"Rollo de Canela Sabor Vanilla\",\r\n  \"descripcion\": \"Pan rollo de canela\",\r\n  \"precioUnitario\": 35\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5134/api/Producto/ProductoUpdate",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5134",
+									"path": [
+										"api",
+										"Producto",
+										"ProductoUpdate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ProductoStatus",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"idProducto\": 10,\r\n  \"activo\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5134/api/Producto/ProductoStatus",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5134",
+									"path": [
+										"api",
+										"Producto",
+										"ProductoStatus"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Inventario",
+					"item": [
+						{
+							"name": "InventarioGeneral",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5134/api/Inventario/General",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5134",
+									"path": [
+										"api",
+										"Inventario",
+										"General"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "InventarioSucursal",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5134/api/Inventario/PorSucursal",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5134",
+									"path": [
+										"api",
+										"Inventario",
+										"PorSucursal"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "RegistrarInventario",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"idSucursal\": 1,\r\n  \"idProducto\": 7,\r\n  \"cantidad\": 8\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5134/api/Inventario/RegistrarInventario",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5134",
+									"path": [
+										"api",
+										"Inventario",
+										"RegistrarInventario"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Venta",
+					"item": [
+						{
+							"name": "RegistrarVenta",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"idSucursal\": 2,\r\n  \"fechaVenta\": \"2025-08-21T21:58:12.434Z\",\r\n  \"total\": 4\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5134/api/Venta/RegistrarVenta",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5134",
+									"path": [
+										"api",
+										"Venta",
+										"RegistrarVenta"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DetalleVenta",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"idVenta\": 4,\r\n  \"idProducto\": 12,\r\n  \"cantidad\": 2,\r\n  \"precioUnitario\": 12.50\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5134/api/Venta/RegistrarDetalleVenta",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5134",
+									"path": [
+										"api",
+										"Venta",
+										"RegistrarDetalleVenta"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAll",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5134/api/Venta/GetAll",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5134",
+									"path": [
+										"api",
+										"Venta",
+										"GetAll"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Historial",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5134/api/Venta/historial",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5134",
+									"path": [
+										"api",
+										"Venta",
+										"historial"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Compra",
+					"item": [
+						{
+							"name": "RegistrarCompra",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"fechaCompra\": \"2025-08-21T22:08:49.698Z\",\r\n  \"idSucursal\": 1,\r\n  \"total\": 442,\r\n  \"idProveedor\": 6\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5134/api/Compra/RegistrarCompra",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5134",
+									"path": [
+										"api",
+										"Compra",
+										"RegistrarCompra"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DetalleCompra",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"idCompra\": 6,\r\n  \"idProducto\": 12,\r\n  \"cantidad\": 26,\r\n  \"precioUnitario\": 2.50\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5134/api/Compra/RegistrarDetalleCompra",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5134",
+									"path": [
+										"api",
+										"Compra",
+										"RegistrarDetalleCompra"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAll",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5134/api/Compra/GetAll",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5134",
+									"path": [
+										"api",
+										"Compra",
+										"GetAll"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
